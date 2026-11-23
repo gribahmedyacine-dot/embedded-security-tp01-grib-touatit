@@ -1,0 +1,89 @@
+TP 01 - Operation Ghost Bus
+
+Team 2 registered.
+108
+111
+216.0
+MISSION 1 COMPLETE: Clock the frame  (+10 points)   Score: 10 / 100
+11111010
+00000101
+1000001111101000001
+MISSION 2 COMPLETE: Stuff it  (+10 points)   Score: 20 / 100
+0x2a1
+0x3a5 loses at bit 3
+0x2a5 loses at bit 9
+0x1a5
+0x1b3 loses at bit 7
+0x1a7 loses at bit 10
+MISSION 3 COMPLETE: Who gets to talk?  (+15 points)   Score: 35 / 100
+
+== Normal bus, 125 kbit/s ==
+Bus load: 15.21 %
+Message              id   sent      max wait     mean wait   late
+Engine speed      0x100    100      0.000 ms      0.000 ms      0
+Braking           0x200     50      0.888 ms      0.888 ms      0
+Temperature       0x300     10      1.520 ms      1.520 ms      0
+Dashboard         0x400     20      2.024 ms      1.456 ms      0
+Diagnostics       0x500     10      2.912 ms      2.912 ms      0
+MISSION 4 COMPLETE: Traffic report  (+10 points)   Score: 45 / 100
+2912.0000000000255
+MISSION 5 COMPLETE: Last in line  (+15 points)   Score: 60 / 100
+
+== Normal bus, 500 kbit/s ==
+Bus load: 3.80 %
+Message              id   sent      max wait     mean wait   late
+Engine speed      0x100    100      0.000 ms      0.000 ms      0
+Braking           0x200     50      0.222 ms      0.222 ms      0
+Temperature       0x300     10      0.380 ms      0.380 ms      0
+Dashboard         0x400     20      0.506 ms      0.364 ms      0
+Diagnostics       0x500     10      0.728 ms      0.728 ms      0
+
+== Flooding attack ==
+Bus load: 104.01 %
+Message              id   sent      max wait     mean wait   late
+Engine speed      0x100    100      5.952 ms      3.248 ms      0
+Braking           0x200     50    268.896 ms    137.352 ms     47
+Temperature       0x300     10   1008.400 ms    560.668 ms     10
+Dashboard         0x400     20   1013.440 ms    546.876 ms     20
+Diagnostics       0x500     10   1031.200 ms    585.196 ms     10
+Flooder             0x0   1000      0.880 ms      0.413 ms    854
+MISSION 6 COMPLETE: The flood  (+10 points)   Score: 70 / 100
+
+== Flooder with id 0x600 ==
+Bus load: 104.01 %
+Message              id   sent      max wait     mean wait   late
+Engine speed      0x100    100      0.880 ms      0.431 ms      0
+Braking           0x200     50      1.752 ms      1.317 ms      0
+Temperature       0x300     10      2.072 ms      1.796 ms      0
+Dashboard         0x400     20      2.576 ms      1.864 ms      0
+Diagnostics       0x500     10      3.464 ms      3.188 ms      0
+Flooder           0x600   1000     46.360 ms     25.428 ms   1000
+
+== Flooder 0x000, period 4 ms ==
+Bus load: 37.41 %
+Message              id   sent      max wait     mean wait   late
+Engine speed      0x100    100      0.888 ms      0.444 ms      0
+Braking           0x200     50      1.776 ms      1.776 ms      0
+Temperature       0x300     10      2.408 ms      2.408 ms      0
+Dashboard         0x400     20      2.912 ms      1.900 ms      0
+Diagnostics       0x500     10      3.800 ms      3.800 ms      0
+Flooder             0x0    250      0.688 ms      0.028 ms      0
+593
+[(0.112, 512, 4), (0.115, 256, 8), (0.319, 768, 2)]
+0x100 323
+0x200 150
+0x300 30
+0x400 60
+0x500 30
+id      expected observed diff
+0x100        300      323   +23
+0x200        150      150    +0
+0x300         30       30    +0
+0x400         60       60    +0
+0x500         30       30    +0
+intruder id: 0x100 fake frames: 23
+MISSION 7 COMPLETE: Unmask the ghost  (+15 points)   Score: 85 / 100
+MISSION 8 COMPLETE: Count the ghosts  (+15 points)   Score: 100 / 100
+23
+[310.142, 350.034, 390.178, 421.508, 440.094, 441.965, 540.182, 602.348]
+Team 2   Score: 100 / 100   Rank: Bus Master   Missions completed: [1, 2, 3, 4, 5, 6, 7, 8]
